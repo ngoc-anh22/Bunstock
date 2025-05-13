@@ -1,0 +1,100 @@
+Tài liệu Đặc tả Yêu cầu (Requirements Specification Document) - Dự án "Bunstock"
+I. Giới thiệu
+1. Mục tiêu của hệ thống:
+Hệ thống quản lý kho "Bunstock" được xây dựng với các mục tiêu chính sau:
+- Quản lý thông tin sản phẩm toàn diện
+- Quản lý thông tin khách hàng
+- Quản lý thông tin nguồn hàng
+- Quản lý thông tin nhóm ngành hàng
+- Quản lý thông tin sàn thương mại
+- Quản lý đơn hàng bán
+- Quản lý đơn hàng hoàn trả
+- Tạo đơn hàng mô phỏng
+- Quản lý đơn xuất nhập kho chi tiết
+- Quản lý chương trình khuyến mãi
+- Quản lý thu chi
+- Quản lý kho hiệu quả
+- Tính toán giá bán tối ưu
+- Tạo nội dung Marketing bằng AI
+- Hỗ trợ bán hàng và báo cáo
+
+2. Phạm vi dự án:
+Phiên bản đầu:
+- Quản lý thông tin sản phẩm toàn diện
+- Quản lý thông tin nguồn hàng
+- Quản lý thông tin nhóm ngành hàng
+- Quản lý thông tin sàn thương mại
+- Quản lý đơn hàng bán
+- Tạo đơn hàng mô phỏng
+- Quản lý đơn xuất nhập kho chi tiết
+- Quản lý chương trình khuyến mãi (cơ bản - 1 cái cố định 10%)
+- Quản lý kho hiệu quả (cơ bản)
+- Tính toán giá bán tối ưu
+Phiên bản sau: 
+- Nâng cấp các tính năng trên
+- Quản lý thông tin khách hàng
+- Quản lý đơn hàng hoàn trả
+- Quản lý thu chi
+- Tạo nội dung Marketing bằng AI
+- Hỗ trợ bán hàng và báo cáo
+
+3. Đối tượng người dùng:
+- Admin - Bún
+
+II. Các nghiệp vụ chính - Functional Requirements:
+Dựa trên mục tiêu hệ thống, các nghiệp vụ chính mà người dùng sẽ thực hiện với hệ thống "Bunstock" bao gồm:
+
+- Quản lý Sản phẩm:
+    + Thêm mới sản phẩm với đầy đủ thông tin (ID hệ thống, SKU, SKU phân loại (nếu có), Tên sản phẩm, Danh mục, Giá bán, Giá gốc, Các loại phí (vận chuyển, phí sàn,...), 
+                                                Cân nặng, Kích thước (Dimension), Hình ảnh, Video (nếu có)).
+    + Xem, sửa đổi, xóa (ẩn) thông tin sản phẩm.
+    + Tìm kiếm và lọc sản phẩm theo nhiều tiêu chí.
+- Quản lý Kho:
+    + Xem số lượng tồn kho hiện tại của từng sản phẩm.
+    + Thực hiện nhập kho (tạo phiếu nhập, chọn sản phẩm, nhập số lượng, chọn nguồn hàng, ghi chú).
+    + Thực hiện xuất kho (tạo phiếu xuất, chọn sản phẩm, nhập số lượng, chọn đối tượng xuất (bán hàng, trả hàng, hủy,...), ghi chú).
+    + Xem lịch sử nhập/xuất kho.
+    + Cảnh báo khi số lượng tồn kho dưới mức cho phép.
+    + Thực hiện kiểm kê kho (ghi nhận số lượng thực tế và so sánh với hệ thống).
+- Quản lý Bán hàng (Đơn hàng):
+    + Tạo đơn hàng bán (chọn sản phẩm, nhập số lượng, áp dụng khuyến mãi (nếu có), ghi nhận thông tin khách hàng (tùy chọn), chọn nơi bán (sàn TMĐT, trực tiếp)).
+    + Xem, sửa đổi thông tin đơn hàng (trạng thái, địa chỉ giao hàng,...).
+    + Theo dõi trạng thái thanh toán và giao hàng.
+    + Tính toán lợi nhuận cho từng đơn hàng.
+- Quản lý Danh mục:
+    + Thêm mới, xem, sửa đổi, xóa danh mục sản phẩm (có thể có phân cấp).
+- Quản lý Nguồn hàng:
+    + Thêm mới, xem, sửa đổi, xóa thông tin nguồn hàng (Tên, Link, Chính sách vận chuyển, Địa chỉ, Cách thức đặt hàng).
+- Quản lý Sàn Thương mại:
+    + Thêm mới, xem, sửa đổi, xóa thông tin sàn thương mại (Tên sàn, Link shop, Chính sách phí, Thiết lập khuyến mại của shop).
+- Công cụ Tính toán Giá Bán:
+    + Nhập giá gốc, các loại phí, tỷ lệ lợi nhuận mong muốn để hệ thống gợi ý giá bán.
+- Báo cáo:
+    + Xem và tải xuống báo cáo tồn kho (có thể lọc theo danh mục, số lượng).
+    + Xem và tải xuống báo cáo nhập/xuất kho theo thời gian.
+    + Xem và tải xuống báo cáo doanh thu và lợi nhuận (theo ngày, tuần, tháng,...).
+    + Xem và tải xuống báo cáo hàng sắp hết.
+- Quản lý Công việc:
+    + Tạo mới, xem, sửa đổi, xóa công việc cần làm.
+    + Phân loại công việc (theo list, theo ngày/tuần/tháng).
+    + Đánh dấu trạng thái công việc (chưa làm, đang làm, đã xong).
+- Quản lý Đơn Xuất Nhập Kho:
+    + Xem danh sách các phiếu nhập và phiếu xuất kho.
+    + Tìm kiếm và lọc phiếu theo thời gian, sản phẩm, đối tượng liên quan.
+- Quản lý Khuyến mãi:
+    + Tạo mới, xem, sửa đổi, xóa các chương trình khuyến mãi (loại khuyến mãi, thời gian áp dụng, sản phẩm áp dụng, giá trị khuyến mãi).
+    + Áp dụng khuyến mãi vào đơn hàng.
+- Quản lý Thu Chi:
+    + Ghi nhận các khoản thu (bán hàng, hoàn trả,...).
+    + Ghi nhận các khoản chi (nhập hàng, chi phí vận hành,...).
+    + Xem báo cáo thu chi theo thời gian (ngày, tuần, tháng, quý, năm).
+- Tạo Đơn Hàng Mô Phỏng:
+    + Thêm sản phẩm vào đơn hàng ảo.
+    + Xem thông tin chi phí (giá gốc, phí), giá bán dự kiến, lợi nhuận ước tính.
+- Quản lý Nội dung Marketing (AI hỗ trợ):
+    + Tạo mô tả sản phẩm tự động dựa trên thông tin sản phẩm (tên, thuộc tính, danh mục).
+    + Tạo bài đăng/tweet/caption cho mạng xã hội liên quan đến sản phẩm hoặc chương trình khuyến mãi.
+    + Gợi ý tiêu đề hấp dẫn cho listing trên sàn thương mại điện tử.
+    + Có thể mở rộng trong tương lai với các tính năng như tạo video từ ảnh đơn giản.
+
+3. Non-Functional Requirements (update sau):
