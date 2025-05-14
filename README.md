@@ -4,6 +4,6 @@
 - Quản lý kho
 - Quản lý đơn hàng, khuyến mãi
 - Quản lý nguồn hàng và sản TMDT
-- Công cụ tính toán giá, tạo báo cáo, tạo đơn hàng mô phỏng, và tạo content marketing
+- Công cụ tính toán giá, tạo báo cáo, và tạo content marketing
 - Quản lý công việc
 - Quản lý thu chi, xuất-nhập kho
